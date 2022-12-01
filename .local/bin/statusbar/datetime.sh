@@ -1,6 +1,13 @@
 #!/bin/sh
 day="$(date +%d)"
 th=""
+char="$(echo $day | wc -m)"
+
+if [ "$char" = "1" ]; then
+	space=""
+else
+	space=" "
+fi
 
 case "$day" in
 	01 | 21 | 31)
@@ -21,6 +28,7 @@ if [ "$th" = "" ]; then
 	th="th"
 fi
 
-date="$(date "+%a %e"$th" %b, %H:%M")"
+date="$(date "+%a")"
+date2="$(date "+%e"$th" %b, %H:%M")"
 icon=""
-echo "$icon $date"
+echo "$icon" "$date""$date2"
