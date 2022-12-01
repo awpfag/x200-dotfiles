@@ -1,0 +1,64 @@
+# reload sxhkd
+super + Escape
+	pkill -USR1 -x sxhkd
+
+### screenshots ###
+
+# regular screenshot
+Print
+	scrot ~/pictures/screenshots/screenshot.png
+
+# screenshot to clipboard
+shift + Print
+	scrot -e 'xclip -selection clipboard -t image/png -i $f' ~/.cache/screenshots/screenshot.png
+
+# window screenshot to clipboard
+alt + Print
+	scrot -ube 'xclip -selection clipboard -t image/png -i $f' ~/.cache/screenshots/screenshot.png
+
+# select screenshot to clipboard
+super + shift + s
+	scrot --select --freeze -e 'xclip -selection clipboard -t image/png -i $f' ~/.cache/screenshots/screenshot.png
+
+### media keys ###
+
+# play/pause
+super + F1
+	mpc toggle; pkill -RTMIN+20 dwmblocks
+
+# previous
+super + F2
+	mpc prev; pkill -RTMIN+20 dwmblocks
+
+# next
+super + F3
+	mpc next; pkill -RTMIN+20 dwmblocks
+
+# stop
+super + F4
+	mpc stop; pkill -RTMIN+20 dwmblocks
+
+# volume up
+XF86AudioRaiseVolume
+	pamixer -i 5; pkill -RTMIN+10 dwmblocks
+
+# volume down
+XF86AudioLowerVolume
+	pamixer -d 5; pkill -RTMIN+10 dwmblocks
+
+# mute volume
+XF86AudioMute
+	pamixer -t; pkill -RTMIN+10 dwmblocks
+
+## opening shit ##
+super + Return
+	st
+
+super + b
+	icecat
+
+super + l
+	xsecurelock
+
+super + p
+	st -e ncmpcpp
