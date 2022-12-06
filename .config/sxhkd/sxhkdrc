@@ -20,6 +20,10 @@ alt + Print
 super + shift + s
 	scrot --select --freeze -e 'xclip -selection clipboard -t image/png -i $f' ~/.cache/screenshots/screenshot.png
 
+## brightness ##
+XF86MonBrightness{Up,Down}  
+  brightnessctl s 10{+,-}; pkill -RTMIN+30 dwmblocks
+
 ### media keys ###
 
 # play/pause
@@ -38,17 +42,13 @@ super + F3
 super + F4
 	mpc stop; pkill -RTMIN+20 dwmblocks
 
-# volume up
-XF86AudioRaiseVolume
-	pamixer -i 5; pkill -RTMIN+10 dwmblocks
-
-# volume down
-XF86AudioLowerVolume
-	pamixer -d 5; pkill -RTMIN+10 dwmblocks
+# volume up/down
+XF86Audio{Raise,Lower}Volume  
+  pulsemixer --change-volume {+,-}10; pkill -RTMIN+10 dwmblocks
 
 # mute volume
-XF86AudioMute
-	pamixer -t; pkill -RTMIN+10 dwmblocks
+super + k
+	pulsemixer --toggle-mute ; pkill -RTMIN+10 dwmblocks
 
 ## opening shit ##
 super + Return
