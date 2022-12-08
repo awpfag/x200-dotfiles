@@ -51,16 +51,12 @@ alias btop='btop --utf-force'
 alias ls='ls --color=auto'
 alias up='doas apt update && doas apt upgrade'
 alias cvd='civ-v-drafter'
-alias todo='nvim ~/documents/todo'
 alias wgetdir='wget -r -np -R "index.html*"'
-alias clearcache='sudo bash ~/.local/bin/clearcache.sh'
-alias lowpower='sudo cpupower frequency-set --governor conservative'
-alias highpower='sudo cpupower frequency-set --governor performance'
-alias powersaver='sudo cpupower frequency-set --governor powersave'
-alias poweroff='doas /sbin/poweroff'
-alias reboot='doas /sbin/reboot'
+alias clearcache='doas bash ~/.local/bin/clearcache.sh'
+alias poweroff='doas poweroff'
+alias reboot='doas reboot'
 
-export PATH=$HOME"/platform-tools:$PATH"
+export PATH="/sbin:/usr/sbin/:$PATH"
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 c
