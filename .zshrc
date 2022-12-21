@@ -55,6 +55,7 @@ alias wgetdir='wget -r -np -R "index.html*"'
 alias clearcache='doas bash ~/.local/bin/clearcache.sh'
 alias poweroff='doas poweroff'
 alias reboot='doas reboot'
+alias git-key='xclip ~/documents/git-key -selection clipboard'
 
 export PATH="/sbin:/usr/sbin/:$PATH"
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
