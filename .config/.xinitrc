@@ -1,7 +1,7 @@
 dwmblocks &
 sxhkd &
 mpd &
-nm-applet &
+unclutter &
 
 xwallpaper --zoom ~/.config/pape.jpg
 
