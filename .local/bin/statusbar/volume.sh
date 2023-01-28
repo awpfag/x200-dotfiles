@@ -1,12 +1,10 @@
 #!/bin/sh
-volume="$(pulsemixer --get-volume | awk '{printf $1"%\n"}')"
-muted="$(pulsemixer --get-mute)"
+volume="$(pactl list sinks | grep 'Volume: front-left' | awk '{printf $5"\n"}')"
+muted="$(pactl list sinks | grep 'Mute')"
+icon=" "
 
-if [ "$muted" = "0" ]; then
-	icon=" "
+if [ "$muted" = "	Mute: yes" ]; then
 	volume="xx"
-else 
-	icon=" "
 fi
 
 echo "$icon$volume"
