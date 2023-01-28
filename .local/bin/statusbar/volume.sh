@@ -1,7 +1,8 @@
 #!/bin/sh
-volume="$(pamixer --get-volume-human)"
+volume="$(pulsemixer --get-volume | awk '{printf $1"%\n"}')"
+muted="$(pulsemixer --get-mute)"
 
-if [ "$volume" = "muted" ]; then
+if [ "$muted" = "0" ]; then
 	icon=" "
 	volume="xx"
 else 

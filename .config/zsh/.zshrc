@@ -11,7 +11,7 @@ setopt COMPLETE_ALIASES
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 #history
-HISTFILE="$HOME/.zsh_history"
+HISTFILE="$HOME/.config/.zsh_history"
 HISTSIZE=10000
 SAVEHIST=10000
 setopt HIST_IGNORE_ALL_DUPS
@@ -42,22 +42,17 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 fi
 
 #aliases
-alias sudo='doas'
-alias cp='cp -r'
 alias ytdlmp3='yt-dlp -x --audio-format mp3'
 alias ytdl='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"'
-alias sx='startx'
+alias sx='startx ~/.config/.xinitrc'
 alias btop='btop --utf-force'
 alias ls='ls --color=auto'
-alias up='doas apt update && doas apt upgrade'
-alias cvd='civ-v-drafter'
 alias wgetdir='wget -r -np -R "index.html*"'
-alias clearcache='doas bash ~/.local/bin/clearcache.sh'
 alias poweroff='doas poweroff'
 alias reboot='doas reboot'
 alias git-key='xclip ~/documents/git-key -selection clipboard'
 
 export PATH="/sbin:/usr/sbin/:$PATH"
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/site-functions/zsh-autosuggestions.zsh
 c

@@ -1,5 +1,6 @@
 #!/bin/sh
-brightness="$(brightnessctl -m i | sed 's/,/ /g' | awk {'printf $4"\n"'})"
+brightness="$(light)"
+brightness="$(echo ${brightness%.*})"
 icon=""
 
-echo "$icon $brightness"
+echo "$icon $brightness%"
