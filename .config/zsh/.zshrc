@@ -11,7 +11,7 @@ setopt COMPLETE_ALIASES
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 #history
-HISTFILE="$HOME/.config/.zsh_history"
+HISTFILE="$HOME/.config/zsh/.zsh_history"
 HISTSIZE=10000
 SAVEHIST=10000
 setopt HIST_IGNORE_ALL_DUPS
