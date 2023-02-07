@@ -8,3 +8,4 @@ export BROWSER="icecat"
 # cleanup home
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 export ZDOTDIR="$HOME/.config/zsh"
+export GITCONFIG="XDG_CONFIG_HOME/git/config"
