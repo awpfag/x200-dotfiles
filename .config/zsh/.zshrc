@@ -41,11 +41,14 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
         add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
 fi
 
+# delete "Desktop and Downloads if exist"
+[ -d "$HOME/Desktop" ] && rm -rf $HOME/Desktop
+[ -d "$HOME/Downloads" ] && rm -rf $HOME/Downloads
+
 #aliases
 alias ytdlmp3='yt-dlp -x --audio-format mp3'
 alias ytdl='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"'
 alias sx='startx ~/.config/.xinitrc'
-alias btop='btop --utf-force'
 alias ls='ls --color=auto'
 alias wgetdir='wget -r -np -R "index.html*"'
 alias poweroff='doas poweroff'
