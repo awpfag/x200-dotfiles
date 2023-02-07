@@ -41,9 +41,10 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
         add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
 fi
 
-# delete "Desktop and Downloads if exist"
+# delete useless folders that keep appearing in ~/
 [ -d "$HOME/Desktop" ] && rm -rf $HOME/Desktop
 [ -d "$HOME/Downloads" ] && rm -rf $HOME/Downloads
+[ -d "$HOME/.lyrics" ] && rm -rf $HOME/.lyrics
 
 #aliases
 alias ytdlmp3='yt-dlp -x --audio-format mp3'
