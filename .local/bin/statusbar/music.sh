@@ -1,17 +1,16 @@
 #!/bin/sh
-status="$(playerctl --player=mpd status)"
-output="$(playerctl --player=mpd metadata --format "{{ artist }} - {{ title }}")"
+status="$(mpc | sed '2q;d' | awk '{printf $1}')"
+output="$(mpc -f "%title%" | head -1)"
 
 case "$status" in
-	Stopped)
-		exit 0
-	;; 
-	Playing)
+	"[playing]")
 		output=" ${output}"
 	;;
-	Paused)
+	"[paused]")
 		output=" ${output}" 
 	;;
+	*)
+		exit 0
 esac
 
 char="$(echo $output | wc -m)"
