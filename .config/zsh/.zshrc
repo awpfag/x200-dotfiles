@@ -55,6 +55,9 @@ alias wgetdir='wget -r -np -R "index.html*"'
 alias poweroff='doas poweroff'
 alias reboot='doas reboot'
 alias git-key='xclip ~/documents/git-key -selection clipboard'
+alias update='doas emaint sync -a'
+alias upgrade='doas emerge -auDN @world'
+alias cleanup='doas emerge -a --depclean'
 
 export PATH="/sbin:/usr/sbin/:$PATH"
 source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
