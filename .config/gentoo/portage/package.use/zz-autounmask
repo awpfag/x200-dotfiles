@@ -1,0 +1,3 @@
+# package.use# required by www-client/icecat-102.6.0::src_prepare-overlay[system-libvpx]
+# required by icecat (argument)
+>=media-libs/libvpx-1.12.0-r1 postproc
