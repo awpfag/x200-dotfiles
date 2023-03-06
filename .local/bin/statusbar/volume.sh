@@ -1,9 +1,9 @@
 #!/bin/sh
-volume="$(pactl list sinks | grep 'Volume: front-left' | awk '{printf $5"\n"}')"
-muted="$(pactl list sinks | grep 'Mute')"
+volume="$(pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+(?=%)' | head -n 1)%"
+muted="$(pactl list sinks | grep -o 'Mute: yes')"
 icon=" "
 
-if [ "$muted" = "	Mute: yes" ]; then
+if [ "$muted" = "Mute: yes" ]; then
 	volume="xx"
 fi
 
