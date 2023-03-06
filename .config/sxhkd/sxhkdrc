@@ -43,8 +43,10 @@ super + Return
 	st
 
 super + b
-	icecat
+	librewolf
 
+super + shift + b
+	icecat
 super + l
 	xsecurelock
 
