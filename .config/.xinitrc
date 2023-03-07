@@ -1,9 +1,8 @@
 dwmblocks &
 sxhkd &
-mpd &
+mpd --kill &
 unclutter &
-picom --vsync --backend=glx &
-
 xwallpaper --zoom ~/.config/pape.jpg
+picom --vsync --backend=glx &
 
 exec dwm
