@@ -21,4 +21,4 @@ if [ "$char" -gt "$limit" ]; then
 	output="${output}..."
 fi
         
-echo "$output"
+echo " $output"
