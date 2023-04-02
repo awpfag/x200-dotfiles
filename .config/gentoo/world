@@ -3,6 +3,7 @@ app-admin/sysklogd
 app-editors/neovim
 app-eselect/eselect-repository
 app-misc/neofetch
+app-portage/cpuid2cpuflags
 app-portage/gentoolkit
 app-shells/gentoo-zsh-completions
 app-shells/zsh
@@ -14,10 +15,13 @@ app-text/zathura-pdf-mupdf
 dev-libs/light
 dev-vcs/git
 games-misc/asciiquarium
+games-misc/cowsay
+games-strategy/freeciv
 media-fonts/cascadia-code
 media-fonts/fontawesome
 media-gfx/feh
 media-gfx/scrot
+media-libs/libsndfile
 media-sound/mpc
 media-sound/mpd
 media-sound/ncmpcpp
@@ -25,7 +29,6 @@ media-sound/pulseaudio
 media-sound/pulsemixer
 media-video/mpv
 net-misc/chrony
-net-misc/dhcpcd
 net-misc/yt-dlp
 net-vpn/wireguard-tools
 net-wireless/iwd
@@ -34,11 +37,13 @@ sys-apps/mlocate
 sys-boot/grub
 sys-kernel/dracut
 sys-kernel/gentoo-sources
+sys-process/cronie
 sys-process/htop
-www-client/librewolf
+www-client/librewolf-bin
 x11-apps/setxkbmap
 x11-base/xorg-server
 x11-drivers/xf86-video-intel
+x11-libs/libXft
 x11-libs/libXinerama
 x11-misc/picom
 x11-misc/sxhkd

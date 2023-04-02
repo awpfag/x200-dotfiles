@@ -1,3 +1,13 @@
-# package.use# required by www-client/icecat-102.6.0::src_prepare-overlay[system-libvpx]
-# required by icecat (argument)
->=media-libs/libvpx-1.12.0-r1 postproc
+# required by media-sound/ncmpcpp-0.9.2-r2::gentoo
+# required by ncmpcpp (argument)
+>=dev-libs/boost-1.81.0-r1 icu
+ required by www-client/librewolf-bin-110.0.1_p1::librewolf
+# required by librewolf-bin (argument)
+>=x11-libs/gtk+-3.24.35 wayland
+# required by x11-libs/gtk+-3.24.35::gentoo[wayland]
+# required by www-client/librewolf-bin-110.0.1_p1::librewolf
+# required by librewolf-bin (argument)
+>=media-libs/mesa-22.3.7-r1 wayland
+# required by games-strategy/freeciv-3.0.1-r1::gentoo[sound,-dedicated]
+# required by freeciv (argument)
+>=media-libs/sdl2-mixer-2.6.2-r1 vorbis
