@@ -1,4 +1,5 @@
 #!/bin/sh
-temp="$(sensors | grep Other | awk '{printf $2"\n"}' | sed 's/+//g' | sed 's/.0//g')"
+temp="$(sensors | grep 'CPU' | awk '{printf $2"\n"}' | sed 's/+//g')"
 icon=""
-echo "$icon $temp"
+echo " $icon $temp"
+

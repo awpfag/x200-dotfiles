@@ -43,12 +43,7 @@ super + Return
 	st
 
 super + b
-	librewolf
-
-super + shift + b
-	icecat
-super + l
-	xsecurelock
+	librewolf-bin
 
 super + p
 	st -e ncmpcpp
