@@ -4,3 +4,4 @@ dev-libs/nss ~amd64
 games-misc/asciiquarium ~amd64
 dev-perl/Term-Animation ~amd64
 games-strategy/freeciv ~amd64
+app-text/md4c ~amd64

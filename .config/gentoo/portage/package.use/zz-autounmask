@@ -1,7 +1,13 @@
 # required by media-sound/ncmpcpp-0.9.2-r2::gentoo
 # required by ncmpcpp (argument)
 >=dev-libs/boost-1.81.0-r1 icu
- required by www-client/librewolf-bin-110.0.1_p1::librewolf
+# required by www-client/seamonkey-2.53.14-r2::gentoo[system-png]
+# required by seamonkey (argument)
+>=media-libs/libpng-1.6.39 apng
+# required by www-client/seamonkey-2.53.14-r2::gentoo[system-sqlite]
+# required by seamonkey (argument)
+>=dev-db/sqlite-3.40.1 secure-delete
+# required by www-client/librewolf-bin-110.0.1_p1::librewolf
 # required by librewolf-bin (argument)
 >=x11-libs/gtk+-3.24.35 wayland
 # required by x11-libs/gtk+-3.24.35::gentoo[wayland]
