@@ -8,7 +8,7 @@ fi
 
 mpd &
 xwallpaper --zoom ~/.config/pape.jpg
-picom --vsync --backend=xrender --experimental-backends --xrender-sync-fence &
+picom --vsync --backend=xrender --xrender-sync-fence &
 setxkbmap gb
 
 exec dwm

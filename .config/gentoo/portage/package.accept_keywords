@@ -5,3 +5,5 @@ games-misc/asciiquarium ~amd64
 dev-perl/Term-Animation ~amd64
 games-strategy/freeciv ~amd64
 app-text/md4c ~amd64
+x11-misc/pcmanfm ~amd64
+x11-libs/libfm ~amd64

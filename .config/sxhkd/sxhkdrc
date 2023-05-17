@@ -43,7 +43,7 @@ super + Return
 	st
 
 super + b
-	librewolf-bin
+	librewolf
 
 super + p
 	st -e ncmpcpp
